@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Portfolio of Abhinit Kumar — Digital Marketing Professional specializing in SEO, Meta Ads, Google Ads, Social Media Marketing, and Canva."
+  />
+  <title>Abhinit Kumar | Digital Marketing Professional</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Fixed 3D WebGL Background & Hero Scene -->
+  <canvas id="webgl-canvas" aria-hidden="true"></canvas>
+
+  <!-- Subtle Ambient Neon Glow Overlays -->
+  <div class="ambient-glow ambient-glow--blue" aria-hidden="true"></div>
+  <div class="ambient-glow ambient-glow--purple" aria-hidden="true"></div>
+
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="container navbar__inner">
+      <a href="#home" class="brand" aria-label="Abhinit Kumar Home">
+        <span class="brand__emblem" aria-hidden="true">
+          <span>AK</span>
+        </span>
+        <span class="brand__text">
+          <span class="brand__name">Abhinit Kumar</span>
+          <span class="brand__role">Digital Marketing</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" id="nav-links" aria-label="Primary Navigation">
+        <a href="#home" class="nav-link active" data-section="home">Home</a>
+        <a href="#about" class="nav-link" data-section="about">About Me</a>
+        <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+        <a href="#certifications" class="nav-link" data-section="certifications">Certifications</a>
+        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+        <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="#contact" class="btn btn--glow btn--sm navbar__cta">Connect</a>
+        <button
+          type="button"
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="nav-links"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 1. HOME / 3D HERO SECTION -->
+    <section id="home" class="section hero">
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <div class="hero__badge glass-pill">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <span>Digital Marketing Professional</span>
+          </div>
+
+          <h1 class="hero__title">
+            <span class="gradient-text">ABHINIT KUMAR</span>
+          </h1>
+
+          <p class="hero__motto">Audit. Create. Rank &amp; Grow.</p>
+
+          <p class="hero__tagline">
+            Engineering growth across
+            <span class="typing-text" id="typing-text">SEO &amp; Search Visibility</span><span class="typing-cursor" aria-hidden="true">|</span>
+          </p>
+
+          <p class="hero__description">
+            Performance-driven Digital Marketing Professional trained at
+            <strong>DIDM (Grade A, 88%)</strong> with practical agency experience at
+            <strong>Sharkmondo Agency</strong>. Specialized in scaling brand presence through
+            SEO, Meta Ads, Google Ads, Social Media Marketing, and Canva creatives.
+          </p>
+
+          <div class="hero__cta-group">
+            <a href="#projects" class="btn btn--glow">
+              <span>Explore Projects</span>
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M5 12h14M13 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn--glass">
+              <span>Start a Conversation</span>
+            </a>
+          </div>
+
+          <div class="hero__credentials">
+            <div class="credential-chip glass-card">
+              <span class="credential-chip__label">Certification</span>
+              <span class="credential-chip__value">DIDM · Grade A (88%)</span>
+            </div>
+            <div class="credential-chip glass-card">
+              <span class="credential-chip__label">Agency Experience</span>
+              <span class="credential-chip__value">Sharkmondo Agency</span>
+            </div>
+            <div class="credential-chip glass-card">
+              <span class="credential-chip__label">Core Focus</span>
+              <span class="credential-chip__value">SEO · Meta · Google Ads</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive 3D Portrait Stage (Right Side) -->
+        <div class="hero__stage reveal" id="hero-3d-stage" aria-label="Abhinit Kumar full-body portrait with 3D orbital rings">
+          <div class="portrait-lighting" aria-hidden="true"></div>
+          <canvas id="portrait-orbit-canvas" class="portrait-orbit-canvas" aria-hidden="true"></canvas>
+
+          <div class="hero-portrait" id="hero-portrait">
+            <div class="hero-portrait__float">
+              <img
+                src="assest/photo/abhinit_png.png"
+                alt="Abhinit Kumar — Digital Marketing Professional full-body portrait"
+                class="hero-portrait__img"
+                width="375"
+                height="666"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-indicator" aria-label="Scroll to About Me">
+        <span class="scroll-indicator__mouse">
+          <span class="scroll-indicator__wheel"></span>
+        </span>
+        <span class="scroll-indicator__text">Scroll</span>
+      </a>
+    </section>
+
+    <!-- 2. ABOUT ME SECTION -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">01 / Profile</span>
+          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+          <p class="section-subtitle">
+            Combining structured digital marketing training with hands-on agency execution.
+          </p>
+        </div>
+
+        <div class="about__grid">
+          <div class="about__visual glass-card tilt-card reveal">
+            <div class="about__avatar-ring">
+              <div class="about__avatar-core">
+                <span class="about__monogram">AK</span>
+              </div>
+            </div>
+            <h3 class="about__card-name">Abhinit Kumar</h3>
+            <p class="about__card-role">Digital Marketing Professional</p>
+            <div class="about__divider"></div>
+            <ul class="about__facts">
+              <li>
+                <span class="fact-label">Training</span>
+                <span class="fact-value">DIDM — Grade A (88%)</span>
+              </li>
+              <li>
+                <span class="fact-label">Agency Exposure</span>
+                <span class="fact-value">Sharkmondo Agency</span>
+              </li>
+              <li>
+                <span class="fact-label">Specialties</span>
+                <span class="fact-value">SEO, Paid Ads &amp; Social Media</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="about__content reveal">
+            <div class="glass-card about__bio-card">
+              <h3>Strategic Growth Meets Creative Execution</h3>
+              <p>
+                I am <strong>Abhinit Kumar</strong>, a dedicated Digital Marketing Professional focused on
+                helping brands build measurable online visibility, attract high-intent audiences, and
+                communicate clearly across search and social channels.
+              </p>
+              <p>
+                Having completed intensive digital marketing training at <strong>DIDM</strong> with
+                <strong>Grade A (88%)</strong> and gained practical industry experience at
+                <strong>Sharkmondo Agency</strong>, I understand how organic search, paid advertising,
+                and compelling design work together as one connected growth system.
+              </p>
+
+              <div class="pillars-grid">
+                <div class="pillar-item">
+                  <div class="pillar-item__icon pillar-item__icon--blue">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                      <circle cx="11" cy="11" r="7" />
+                      <path d="M20 20l-3.5-3.5" stroke-linecap="round" />
+                    </svg>
+                  </div>
+                  <h4>Organic Discovery</h4>
+                  <p>Structured SEO strategies built around search intent and clean site architecture.</p>
+                </div>
+
+                <div class="pillar-item">
+                  <div class="pillar-item__icon pillar-item__icon--purple">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                      <path d="M12 20V10M18 20V4M6 20v-4" stroke-linecap="round" />
+                    </svg>
+                  </div>
+                  <h4>Paid Media Precision</h4>
+                  <p>Goal-oriented Meta Ads and Google Ads campaigns with targeted messaging.</p>
+                </div>
+
+                <div class="pillar-item">
+                  <div class="pillar-item__icon pillar-item__icon--cyan">
+                    <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                      <rect x="3" y="3" width="18" height="18" rx="4" />
+                      <path d="M8 14l3-3 2 2 3-4" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </div>
+                  <h4>Visual Brand Presence</h4>
+                  <p>Consistent social media storytelling backed by custom Canva creatives.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SKILLS SECTION -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">02 / Capabilities</span>
+          <h2 class="section-title">Core <span class="gradient-text">Skills</span></h2>
+          <p class="section-subtitle">
+            Full-funnel digital marketing disciplines covering search, paid acquisition, social channels, and creative design.
+          </p>
+        </div>
+
+        <div class="skills__grid">
+          <!-- SEO -->
+          <article class="skill-card glass-card tilt-card reveal">
+            <div class="skill-card__glow skill-card__glow--blue"></div>
+            <div class="skill-card__header">
+              <div class="skill-card__icon">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7" />
+                  <path d="M21 21l-4.3-4.3M11 8v6M8 11h6" stroke-linecap="round" />
+                </svg>
+              </div>
+              <span class="skill-card__tag">Organic Search</span>
+            </div>
+            <h3>SEO</h3>
+            <p>
+              Building strong search engine foundations through keyword research, search intent alignment,
+              on-page optimization, and clean site hierarchy.
+            </p>
+            <ul class="tag-list">
+              <li>Keyword Research</li>
+              <li>On-Page SEO</li>
+              <li>Meta Optimization</li>
+              <li>Technical Audits</li>
+            </ul>
+          </article>
+
+          <!-- Meta Ads -->
+          <article class="skill-card glass-card tilt-card reveal">
+            <div class="skill-card__glow skill-card__glow--purple"></div>
+            <div class="skill-card__header">
+              <div class="skill-card__icon">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9L12 3z" stroke-linejoin="round" />
+                  <path d="M12 12l8-4.5M12 12v9M12 12L4 7.5" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <span class="skill-card__tag">Paid Social</span>
+            </div>
+            <h3>Meta Ads</h3>
+            <p>
+              Planning and structuring Facebook &amp; Instagram ad campaigns tailored to audience segments,
+              campaign objectives, and thumb-stopping creatives.
+            </p>
+            <ul class="tag-list">
+              <li>Ads Manager</li>
+              <li>Audience Targeting</li>
+              <li>Funnel Structuring</li>
+              <li>Ad Copywriting</li>
+            </ul>
+          </article>
+
+          <!-- Google Ads -->
+          <article class="skill-card glass-card tilt-card reveal">
+            <div class="skill-card__glow skill-card__glow--blue"></div>
+            <div class="skill-card__header">
+              <div class="skill-card__icon">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path d="M3 17l6-6 4 4 8-8" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M17 7h4v4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <span class="skill-card__tag">Search &amp; Display</span>
+            </div>
+            <h3>Google Ads</h3>
+            <p>
+              Designing intent-driven search and display campaigns focused on keyword relevance,
+              ad quality, structured ad groups, and landing page alignment.
+            </p>
+            <ul class="tag-list">
+              <li>Search Campaigns</li>
+              <li>Keyword Planning</li>
+              <li>Ad Extensions</li>
+              <li>Bid Strategy</li>
+            </ul>
+          </article>
+
+          <!-- Social Media Marketing -->
+          <article class="skill-card glass-card tilt-card reveal">
+            <div class="skill-card__glow skill-card__glow--purple"></div>
+            <div class="skill-card__header">
+              <div class="skill-card__icon">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <circle cx="18" cy="5" r="3" />
+                  <circle cx="6" cy="12" r="3" />
+                  <circle cx="18" cy="19" r="3" />
+                  <path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4" />
+                </svg>
+              </div>
+              <span class="skill-card__tag">Brand &amp; Community</span>
+            </div>
+            <h3>Social Media Marketing</h3>
+            <p>
+              Crafting consistent platform-native content strategies, editorial calendars, and audience
+              engagement workflows that strengthen brand recall.
+            </p>
+            <ul class="tag-list">
+              <li>Content Calendars</li>
+              <li>Brand Positioning</li>
+              <li>Engagement Strategy</li>
+              <li>Platform Growth</li>
+            </ul>
+          </article>
+
+          <!-- Canva -->
+          <article class="skill-card glass-card tilt-card reveal skill-card--wide">
+            <div class="skill-card__glow skill-card__glow--cyan"></div>
+            <div class="skill-card__header">
+              <div class="skill-card__icon">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path d="M12 2l2.4 7.2H22l-6.2 4.5 2.4 7.3L12 16.5 5.8 21l2.4-7.3L2 9.2h7.6L12 2z" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <span class="skill-card__tag">Visual Design</span>
+            </div>
+            <h3>Canva</h3>
+            <p>
+              Designing crisp, high-impact visual assets—from paid ad creatives and social carousels to
+              e-commerce promotional banners and cohesive brand templates.
+            </p>
+            <ul class="tag-list">
+              <li>Ad Creatives</li>
+              <li>Social Carousels</li>
+              <li>Brand Kits</li>
+              <li>Promotional Graphics</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. CERTIFICATIONS SECTION -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">03 / Credentials</span>
+          <h2 class="section-title">Training &amp; <span class="gradient-text">Certifications</span></h2>
+          <p class="section-subtitle">
+            Recognized academic and practical certification in modern digital marketing.
+          </p>
+        </div>
+
+        <div class="cert-showcase glass-card tilt-card reveal">
+          <div class="cert-showcase__badge-col">
+            <div class="cert-medal">
+              <div class="cert-medal__ring"></div>
+              <div class="cert-medal__core">
+                <span class="cert-medal__grade">Grade A</span>
+                <span class="cert-medal__score">88%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cert-showcase__info">
+            <div class="cert-showcase__pill glass-pill">Verified Training Achievement</div>
+            <h3>DIDM — Delhi Institute of Digital Marketing</h3>
+            <p class="cert-showcase__desc">
+              Successfully completed comprehensive Digital Marketing training at DIDM with
+              <strong>Grade A</strong> and an overall score of <strong>88%</strong>, mastering core
+              search, paid media, social media, and creative marketing workflows.
+            </p>
+
+            <div class="cert-modules">
+              <div class="cert-module">
+                <span class="cert-module__dot"></span>
+                <span>Search Engine Optimization (SEO)</span>
+              </div>
+              <div class="cert-module">
+                <span class="cert-module__dot"></span>
+                <span>Meta Ads &amp; Paid Social</span>
+              </div>
+              <div class="cert-module">
+                <span class="cert-module__dot"></span>
+                <span>Google Ads &amp; Search Marketing</span>
+              </div>
+              <div class="cert-module">
+                <span class="cert-module__dot"></span>
+                <span>Social Media Marketing &amp; Canva</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. PROJECTS SECTION -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">04 / Portfolio Work</span>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">
+            Real initiatives focused on e-commerce presence, paid campaign architecture, and organic search optimization.
+          </p>
+        </div>
+
+        <div class="projects__grid">
+          <!-- Project 1: Clicksorbit E-commerce Website -->
+          <article class="project-card glass-card tilt-card reveal">
+            <div class="project-card__visual project-card__visual--ecom">
+              <div class="project-card__mesh" aria-hidden="true"></div>
+              <span class="project-card__category">E-Commerce &amp; Growth</span>
+              <div class="project-card__icon-box">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <path d="M6 6h15l-1.5 9h-12z" stroke-linejoin="round" />
+                  <path d="M6 6L4.5 3H2" stroke-linecap="round" />
+                  <circle cx="9" cy="20" r="1.5" />
+                  <circle cx="18" cy="20" r="1.5" />
+                </svg>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3>Clicksorbit E-commerce Website</h3>
+              <p>
+                Built and structured the Clicksorbit e-commerce digital presence with an emphasis on
+                clean product discovery, SEO-friendly storefront organization, and conversion-ready visuals.
+              </p>
+              <ul class="tag-list">
+                <li>E-Commerce</li>
+                <li>SEO Structure</li>
+                <li>Canva Creatives</li>
+              </ul>
+              <button
+                type="button"
+                class="btn btn--glass btn--sm project-modal-trigger"
+                data-project="clicksorbit"
+              >
+                View Project Scope
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 2: Meta Ads Campaigns -->
+          <article class="project-card glass-card tilt-card reveal">
+            <div class="project-card__visual project-card__visual--meta">
+              <div class="project-card__mesh" aria-hidden="true"></div>
+              <span class="project-card__category">Paid Social Media</span>
+              <div class="project-card__icon-box">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M8 12.5c0-2 1.3-3.5 2.7-3.5 1.1 0 1.8.8 2.6 2 .8 1.2 1.5 2 2.6 2 1.4 0 2.1-1.3 2.1-3" stroke-linecap="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3>Meta Ads Campaigns</h3>
+              <p>
+                Structured end-to-end Facebook and Instagram ad campaigns covering audience targeting,
+                campaign objective alignment, ad copywriting, and custom visual creatives.
+              </p>
+              <ul class="tag-list">
+                <li>Meta Ads</li>
+                <li>Audience Targeting</li>
+                <li>Ad Design</li>
+              </ul>
+              <button
+                type="button"
+                class="btn btn--glass btn--sm project-modal-trigger"
+                data-project="meta-ads"
+              >
+                View Project Scope
+              </button>
+            </div>
+          </article>
+
+          <!-- Project 3: SEO Projects -->
+          <article class="project-card glass-card tilt-card reveal">
+            <div class="project-card__visual project-card__visual--seo">
+              <div class="project-card__mesh" aria-hidden="true"></div>
+              <span class="project-card__category">Organic Search</span>
+              <div class="project-card__icon-box">
+                <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+                  <circle cx="11" cy="11" r="7" />
+                  <path d="M20 20l-3.5-3.5M8 11h6M11 8v6" stroke-linecap="round" />
+                </svg>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3>SEO Projects</h3>
+              <p>
+                Executed comprehensive search engine optimization workflows including keyword mapping,
+                on-page meta &amp; heading optimization, internal linking, and technical site checks.
+              </p>
+              <ul class="tag-list">
+                <li>Keyword Research</li>
+                <li>On-Page SEO</li>
+                <li>Site Audits</li>
+              </ul>
+              <button
+                type="button"
+                class="btn btn--glass btn--sm project-modal-trigger"
+                data-project="seo-projects"
+              >
+                View Project Scope
+              </button>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. EXPERIENCE SECTION -->
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">05 / Journey</span>
+          <h2 class="section-title">Practical <span class="gradient-text">Experience</span></h2>
+          <p class="section-subtitle">
+            Hands-on agency experience paired with structured digital marketing certification.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline__line" aria-hidden="true"></div>
+
+          <article class="timeline__item reveal">
+            <div class="timeline__marker" aria-hidden="true">
+              <span></span>
+            </div>
+            <div class="timeline__card glass-card tilt-card">
+              <div class="timeline__meta">
+                <span class="timeline__badge">Practical Experience</span>
+                <span class="timeline__type">Digital Marketing Agency</span>
+              </div>
+              <h3>Sharkmondo Agency</h3>
+              <p>
+                Gained hands-on practical experience in a live agency environment at
+                <strong>Sharkmondo Agency</strong>, applying digital marketing fundamentals across
+                campaign planning, search optimization, social media workflows, and creative assets.
+              </p>
+              <ul class="timeline__highlights">
+                <li>Collaborated on real-world digital marketing tasks across search and social channels.</li>
+                <li>Supported paid ad setup, audience research, and creative alignment using Canva.</li>
+                <li>Applied structured SEO and social media marketing practices in an agency setting.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline__item reveal">
+            <div class="timeline__marker timeline__marker--purple" aria-hidden="true">
+              <span></span>
+            </div>
+            <div class="timeline__card glass-card tilt-card">
+              <div class="timeline__meta">
+                <span class="timeline__badge timeline__badge--purple">Professional Training</span>
+                <span class="timeline__type">Grade A · 88%</span>
+              </div>
+              <h3>DIDM (Delhi Institute of Digital Marketing)</h3>
+              <p>
+                Completed intensive practical training in digital marketing, earning
+                <strong>Grade A with 88%</strong> across core channels and campaign tools.
+              </p>
+              <ul class="timeline__highlights">
+                <li>Mastered core workflows in SEO, Meta Ads, Google Ads, and Social Media Marketing.</li>
+                <li>Built campaign creatives and promotional designs using Canva.</li>
+                <li>Executed hands-on practice assignments spanning e-commerce, paid ads, and search.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CONTACT SECTION -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">06 / Connect</span>
+          <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+          <p class="section-subtitle">
+            Interested in collaborating on SEO, Meta Ads, Google Ads, or Social Media Marketing? Send a message below.
+          </p>
+        </div>
+
+        <div class="contact__grid">
+          <div class="contact__info glass-card reveal">
+            <h3>Abhinit Kumar</h3>
+            <p class="contact__subtitle">Digital Marketing Professional</p>
+            <p class="contact__intro">
+              Open to digital marketing roles, freelance campaign collaborations, and growth-focused
+              projects in SEO, Meta Ads, Google Ads, Social Media Marketing, and Canva design.
+            </p>
+
+            <div class="contact__summary-list">
+              <div class="contact__summary-item">
+                <span class="contact__summary-label">Core Expertise</span>
+                <span class="contact__summary-value">SEO · Meta Ads · Google Ads · SMM · Canva</span>
+              </div>
+              <div class="contact__summary-item">
+                <span class="contact__summary-label">Certification</span>
+                <span class="contact__summary-value">DIDM — Grade A (88%)</span>
+              </div>
+              <div class="contact__summary-item">
+                <span class="contact__summary-label">Practical Experience</span>
+                <span class="contact__summary-value">Sharkmondo Agency</span>
+              </div>
+            </div>
+
+            <div class="contact__note">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <circle cx="12" cy="12" r="9" />
+                <path d="M12 8v4m0 4h.01" stroke-linecap="round" />
+              </svg>
+              <span>
+                Use the inquiry builder on the right to compose and validate your message or copy a
+                formatted brief directly to your clipboard.
+              </span>
+            </div>
+          </div>
+
+          <form class="contact__form glass-card reveal" id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name">Your Name</label>
+                <input
+                  type="text"
+                  id="contact-name"
+                  name="name"
+                  placeholder="Enter your name"
+                  required
+                  autocomplete="name"
+                />
+                <span class="form-error" id="error-name" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email">Your Email</label>
+                <input
+                  type="email"
+                  id="contact-email"
+                  name="email"
+                  placeholder="Enter your email address"
+                  required
+                  autocomplete="email"
+                />
+                <span class="form-error" id="error-email" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-topic">Area of Interest</label>
+              <select id="contact-topic" name="topic">
+                <option value="SEO Optimization">SEO Optimization</option>
+                <option value="Meta Ads Campaigns">Meta Ads Campaigns</option>
+                <option value="Google Ads Management">Google Ads Management</option>
+                <option value="Social Media Marketing & Canva">Social Media Marketing &amp; Canva</option>
+                <option value="Full-Time / Agency Opportunity">Full-Time / Agency Opportunity</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message">Message</label>
+              <textarea
+                id="contact-message"
+                name="message"
+                rows="4"
+                placeholder="Share details about your project or opportunity..."
+                required
+              ></textarea>
+              <span class="form-error" id="error-message" aria-live="polite"></span>
+            </div>
+
+            <div class="form-actions">
+              <button type="submit" class="btn btn--glow">
+                <span>Prepare Inquiry</span>
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+              <button type="button" class="btn btn--glass" id="copy-brief-btn">
+                Copy Brief
+              </button>
+            </div>
+
+            <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Project Details Modal -->
+  <div class="modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal__backdrop" id="modal-backdrop"></div>
+    <div class="modal__dialog glass-card">
+      <button type="button" class="modal__close" id="modal-close" aria-label="Close project details">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M18 6L6 18M6 6l12 12" stroke-linecap="round" />
+        </svg>
+      </button>
+      <span class="modal__category" id="modal-category"></span>
+      <h3 class="modal__title" id="modal-title"></h3>
+      <p class="modal__summary" id="modal-summary"></p>
+      <div class="modal__section">
+        <h4>Key Focus &amp; Deliverables</h4>
+        <ul class="modal__list" id="modal-deliverables"></ul>
+      </div>
+      <div class="modal__section">
+        <h4>Skills &amp; Tools Applied</h4>
+        <ul class="tag-list" id="modal-tags"></ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="brand__emblem brand__emblem--sm" aria-hidden="true"><span>AK</span></span>
+        <span>Abhinit Kumar · Digital Marketing Professional</span>
+      </div>
+
+      <nav class="footer__links" aria-label="Footer Navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="#home" class="btn btn--glass btn--sm" aria-label="Back to top">
+        Top ↑
+      </a>
+    </div>
+  </footer>
+
+  <!-- Three.js (UMD build works across both http:// and file://) -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.147.0/build/three.min.js"></script>
+  <script src="js/three-scene.js"></script>
+  <script src="js/portrait-orbit.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
